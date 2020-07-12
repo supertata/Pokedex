@@ -1,14 +1,15 @@
 import React from "react";
+import Logo from "./Logo";
+import BestPokemon from "./BestPokemon";
+import CaughtPokemon from "./CaughtPokemon";
 
 function App() {
   return (
-    <header>
-      <h1>Welcome to the Pokedex</h1>
-      <img
-        alt=""
-        src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
-      />
-    </header>
+    <div>
+      <Logo appName="Pokedex" />
+      <BestPokemon abilities={["Anticipation", "Adaptability", "Run-Away"]} />
+      <CaughtPokemon date={new Date().toLocaleDateString()} />
+    </div>
   );
 }
 
